@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    
+    background-image: url(https://image.freepik.com/vector-gratis/brillo-dorado-brillo-textura-sobre-fondo-negro_41737-29.jpg);
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    font-weight: 300;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 30px;
+    color:wheat;
+}
+.linea{
+ background: #fac104;
+ display: block;
+}
+h3{
+    font-weight: 300;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 30px;
+    color: wheat;
+}
+.link {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+ 
+
+}
+.link a{
+    text-decoration: none;
+    text-align: center;
+    color: wheat;
+    background: grey;
+    
+}

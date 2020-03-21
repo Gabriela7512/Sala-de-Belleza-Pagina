@@ -1,0 +1,253 @@
+body{
+    font-family: 'Playball', cursive;
+    align-items: center;
+     font-size: 1.2rem;
+   margin-top: 0px;
+   justify-content: center;
+
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+   position: relative;
+   z-index: 1;
+}
+ul li{
+   float:left;
+   width: 250px;
+   height: 45px;
+   background-color:black;
+   opacity : .8;
+   line-height: 45px;
+   text-align: center;
+   font-size: 22px;
+  
+}
+ul li a{
+    text-decoration: none ;
+    color: white;
+    display: block;
+}
+
+ul li a{
+    background: black;
+    height: 35px;
+}
+ul li ul li{
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: 75%;
+}
+
+.contenedor-all{
+    
+    
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.slide{
+    display: flex;
+    transform: translateX(5px);
+    transition: all 800ms;
+    animation-name: autoplay;
+    animation-duration: 7.5s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+     animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.pagination-item:hover{
+    transform: scale(2);
+}
+
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.pagination-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: #fff;
+}
+
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: #fff;
+}
+
+
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: #fff;
+
+
+}
+
+
+
+@keyframes autoplay{
+    33%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    
+    66%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+    
+    100%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+   
+
+    
+
+}
+
+
+.social-bar{
+    position: fixed;
+    right: 0;
+    top:35%;
+    font-size: 1.5rem;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+.icon{
+ color :white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+.icon-facebook{
+    background: #1877f2;
+}
+.icon-messenger{
+    background:#00b2ff;
+}
+.icon-whatsapp{
+    background: #219629;
+}
+.icon:first-child{
+    border-radius: 1rem 0 0 0;
+}
+.icon:last-child{
+    border-radius:0 0 0 1rem;
+}
+.icon:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(12, 2, 2, 0.42)
+
+}
+.galeria{
+  font-family: 'Times New Roman', Times, serif;
+}
+ .galeria h1{
+     text-align: center;
+     margin-top: 0px;
+     
+
+ }
+ .linea {
+     border-top: 5px solid #0ac6f0;
+
+ }
+ .contenedor-imagenes{
+     display: flex;
+    margin: auto;
+    justify-content: space-around;/*espacio entre imagenes*/
+    flex-wrap: wrap;
+    border-radius: 3px;
+ }
+  .contenedor-imagenes .imagen{
+  width: 32%;
+  position: relative;
+  height: 550px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75);
+  }
+  .imagen img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+    footer {
+        overflow :hidden;
+        width :100%;
+        text-align: center;
+        color: #0e0e0e;
+       font-size: 29px;
+       background: rgb(17, 172, 189);
+    }
